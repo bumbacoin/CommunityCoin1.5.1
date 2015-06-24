@@ -120,17 +120,6 @@ OverviewPage::OverviewPage(QWidget *parent) :
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
 
-    //Play the movie man!
-	QMovie *movie = NULL;
-    movie = new QMovie(":/movies/CommunityCoinspin", "gif", this);
-	if(movie->isValid())
-	{
-    ui->CommunityCoin->setMovie(movie);
-    ui->CommunityCoin->setScaledContents(false);
-    movie->start();
-	}
-	else
-	qDebug()<<"Movie Is Invalid";
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)

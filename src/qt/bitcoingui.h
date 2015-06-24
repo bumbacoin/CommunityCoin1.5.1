@@ -14,8 +14,6 @@ class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
-class ChatWindow;
-class MarketStats;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -67,8 +65,6 @@ private:
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
-    ChatWindow *chatWindow;
-    MarketStats *marketStats;
 
 
     QLabel *labelEncryptionIcon;
@@ -97,9 +93,6 @@ private:
     QAction *changePassphraseAction;
     QAction *aboutQtAction;
     QAction *openRPCConsoleAction;
-    /** Chat actions */
-    QAction *chatAction;
-    QAction *marketAction;
 
 
 
@@ -154,10 +147,6 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
-    /** Switch to the IRC page */
-    void gotoChatPage();
-    /** Switch to Market Data */
-    void gotoMarketStats();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
